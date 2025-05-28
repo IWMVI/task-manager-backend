@@ -30,7 +30,6 @@ module.exports = {
       res.status(201).json(task);
     } catch (error) {
       console.error("Erro ao criar tarefa:", error);
-      // Mostrando detalhes do erro para facilitar depuração
       res.status(500).json({ error: "Erro ao criar tarefa", details: error.message });
     }
   },
