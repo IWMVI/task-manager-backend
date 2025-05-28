@@ -2,18 +2,18 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
 
 const Task = sequelize.define("Task", {
-  title: {
+  titulo: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
+  descricao: {
     type: DataTypes.STRING,
   },
-  dueDate: {
+  dataConclusao: {
     type: DataTypes.DATEONLY,
     allowNull: false,
   },
-  completed: {
+  completado: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
