@@ -7,15 +7,15 @@ const Task = sequelize.define("Task", {
     allowNull: false,
   },
   descricao: {
-    type: DataTypes.STRING,
-  },
-  dataConclusao: {
-    type: DataTypes.DATEONLY,
-    allowNull: false,
+    type: DataTypes.TEXT,
   },
   completado: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
+  },
+  dataConclusao: {
+    type: DataTypes.DATE,
+    allowNull: true, // permite null para tarefas não concluídas
   },
 });
 
